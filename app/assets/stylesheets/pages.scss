@@ -1,0 +1,119 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/********************************
+					Pastor Page
+/********************************/
+
+.pastor header {
+	background: #fff;
+}
+
+.pastor-name {
+	padding: 1rem;
+	background: #222;
+	color: #fff;
+	margin-top: 0;
+}
+
+.pastor-pic ul {
+	background: #222;
+	color: #fff;
+	padding: 1rem;
+
+	li {
+		padding: 0.5rem 0;
+		line-height: 1.4;
+	}
+}
+
+li {
+	list-style-type: none;
+}
+
+.rev-pic {
+	margin-bottom: 1rem;
+}
+
+.pastor-bio p {
+	padding: 0.5rem 0;
+	font-size: 1.2rem;
+	line-height: 1.6;
+	color: grey;
+}
+
+.pastor-bio ol {
+	background: #222;
+	color: #fff;
+	padding: 1.5rem 1rem;
+	line-height: 1.8;
+	margin: 1rem 0;
+}
+
+
+/****************************
+				Schedules
+*****************************/
+
+.activity-title {
+	margin: 1.5rem 0;
+	color: grey;
+}
+
+span.time {
+	float: right;
+}
+
+.m-width {
+	width: 14rem;
+}
+
+.activity p {
+	padding: 0.6rem 0;
+	font-size: 1rem;
+}
+
+.m-line {
+	display: block;
+}
+
+
+/****************************
+				Staff
+*****************************/
+
+.church-staff {
+	padding: 0.5rem 0;
+}
+
+.church-staff p {
+	padding: 0.6rem 0;
+	line-height: 1.6;
+}
+
+/****************************
+				History
+*****************************/
+
+.pastors p,
+.history-section p {
+	padding: 0.6rem 0;
+	line-height: 1.6;	
+}
+
+.former-pastors {
+	width: 45%;
+	float: left;
+	margin: 2.5%;
+}
+
+
+
+
+
+
+
+
+
+

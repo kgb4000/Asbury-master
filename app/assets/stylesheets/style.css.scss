@@ -1,0 +1,317 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+	font-size: 1rem;
+	background: #fafafa;
+	outline: none;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+img {
+	width: 100%;
+}
+
+figure {
+	margin: 0;
+}
+
+.container {
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 0 1.4rem;
+}
+
+.image-container {
+	margin: 0 auto;
+}
+
+header {
+	height: auto;
+	line-height: 4rem;
+	width: 100%;
+	transition: all 0.3s ease 0s;
+}
+
+#logo,
+#d-logo {
+	float: left;
+	font-size: 1.2rem;
+	font-weight: bolder;
+	margin: 0;
+	color: #222;
+	text-decoration: none;
+}
+
+#d-logo {
+	display: none;
+}
+
+#menu-btn {
+	float: right;
+	background: transparent;
+	border: none;
+	outline: none;
+}
+
+nav {
+	display: none;
+}
+
+nav li {
+	background: #fafafa;
+}
+
+nav li a {
+	text-decoration: none;
+	font-size: 1.2rem;
+	display: block;
+	padding: 0.1rem 2rem 0.1rem;
+	margin-top: 0.1rem;
+	color: #333;
+	transition: all 0.3s ease 0s;
+}
+
+nav li a:hover {
+	color: #fff;
+	background: #222;
+	padding-left: 4rem;
+}
+
+.hero-img {
+	height: 75%;
+	background-image: asset-data-url('alone.jpeg');
+	background-repeat: no-repeat;
+  background-position: center; 
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/********************************
+			Mission Value Vision
+/********************************/
+
+.mission-value-vision {
+	margin-top: 4rem;
+	padding: 4rem 0;
+}
+
+.section-title {
+	text-align: center;
+	font-size: 1.6rem;
+	text-align: center;
+	color: grey;
+	padding: 1rem 2rem;
+}
+
+.mission-value-vision {
+	background: #222;
+}
+
+.mission,
+.vision,
+.value {
+	margin: 2rem 0;
+}
+
+.mission p,
+.value p {
+	color: grey;
+	font-size: 1.2rem;
+	line-height: 1.8rem;
+}
+
+.vision ul li {
+	color: grey;
+	font-size: 1.2rem;
+	line-height: 1.6rem;
+	list-style: none;
+}
+
+.center-img {
+	text-align: center;
+}
+
+.front-img,
+.front-img-1 {
+	display: inline-block;
+	background: #fff;
+}
+
+.front-img-1 {
+	display: none;
+}
+
+.little-about-text h2 {
+	font-size: 1.5rem;
+	letter-spacing: 0.1rem;
+	margin: 1rem 0;
+}
+
+.little-about-text p {
+	font-size: 1.2rem;
+	line-height: 1.6;
+}
+
+.center-btn {
+	text-align: center;
+	margin: 2rem 0;
+}
+
+#btn {
+	border: none;
+	padding: 0.8rem 1.5rem;
+	font-size: 1.2rem;
+	text-align: center;
+	background: #CF4647;
+	color: #fff;
+	transition: all 0.3s ease 0s;
+	outline: none;
+	text-decoration: none;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #222;
+}
+
+.church-info {
+	padding: 4rem 0;
+}
+
+h4 {
+	margin-bottom: 1rem;
+}
+
+.location-email {
+	padding: 2rem 0;
+}
+
+#map {
+	height: 25rem;
+	border-top: 3px solid #222;
+	border-bottom: 3px solid #222;
+}
+
+.page-title {
+	text-align: center;
+}
+
+/********************************
+					Footer
+/********************************/
+
+footer {
+	font-size: 0.8rem;
+	padding: 2rem 0;
+	text-align: center;
+}
+
+footer p {
+	padding: 1rem 0;
+}
+
+/********************************
+					Footer
+/********************************/
+
+@media (min-width: 600px) and (max-width: 960px) { 
+
+	.container {
+		max-width: 560px;
+	}
+
+	#logo {
+		display: none;
+	}
+
+	#d-logo {
+		display: inline-block;
+	}
+
+	.church-info .container {
+		width: 900px;
+	}
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) { 
+
+	.container {
+		max-width: 680px;
+	}
+
+	nav li a {
+		padding-left: 3.5rem;
+	}
+
+	.location-email {
+		width: 45%;
+		float: left;
+		margin: 2.5%;
+	}
+
+	.past-pastors-img,
+	.old-church-img,
+	.pastor-pic {
+		width: 30%;
+		float: left;
+		margin-right: 2.5%;
+	}
+
+	.past-pastors-img {
+		margin-top: 5rem;
+	}
+
+	.pastors,
+	.history-section,
+	.pastor-bio {
+		width: 65%;
+		float: left;
+		margin-left: 2.5%;
+	}
+
+	.pastors .section-title {
+		text-align: left;
+		padding-left: 0;
+	}
+
+	.m-line {
+		display: inline;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
