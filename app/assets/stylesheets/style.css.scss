@@ -174,7 +174,8 @@ nav li a:hover {
 	margin: 2rem 0;
 }
 
-#btn {
+#btn,
+input[type="submit"] {
 	border: none;
 	padding: 0.8rem 1.5rem;
 	font-size: 1.2rem;
@@ -213,6 +214,20 @@ h4 {
 	text-align: center;
 }
 
+.favorite-verses {
+	margin: 20rem 0;
+	background: #fff;
+}
+
+.address-link {
+	text-decoration: none;
+	color: #222;
+}
+
+.address-link:hover {
+	color: #CF4647;
+}
+
 /********************************
 					Footer
 /********************************/
@@ -231,11 +246,7 @@ footer p {
 					Footer
 /********************************/
 
-@media (min-width: 600px) and (max-width: 960px) { 
-
-	.container {
-		max-width: 560px;
-	}
+@media (min-width: 500px) { 
 
 	#logo {
 		display: none;
@@ -251,7 +262,7 @@ footer p {
 
 }
 
-@media (min-width: 768px) and (max-width: 1024px) { 
+@media (min-width: 500px) { 
 
 	.container {
 		max-width: 680px;

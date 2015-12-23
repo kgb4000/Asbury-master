@@ -108,6 +108,51 @@ span.time {
 	margin: 2.5%;
 }
 
+/****************************
+			Pastor's Blog
+*****************************/
+
+.article-title {
+	font-size: 1.8rem;
+}
+
+.blog-page {
+	text-align: center;
+}
+
+#article_title,
+#article_post {
+	width: 100%;
+	margin: 1rem 0;
+	border: 1px solid #eee;
+	padding: 0.5rem;
+}
+
+#article_title {
+	height: 2.5rem;
+}
+
+h1.article-title a {
+	text-decoration: none;
+	color: #222;
+	cursor: pointer;
+}
+
+#error_explanation {
+	margin-bottom: 2rem;
+}
+
+.backlink {
+	display: block;
+	margin: 1rem 0;
+}
+
+
+
+
+
+
+
 
 
 
