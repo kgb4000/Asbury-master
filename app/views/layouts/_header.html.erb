@@ -1,49 +1,31 @@
 <header>
-	<div class="container group">
+	<div class="header-container group">
 		<div class="main-header group">
 	    <%= link_to "ABUMC", root_path, id: "logo" %>
 	    <%= link_to "Asbury Broadneck UMC", root_path, id: "d-logo" %>
 			<button id="menu-btn">Menu</button>
 	  </div>
-	 </div>
-	<nav>
-		<ul class="navigation">
-			<li><%= link_to "About", root_path, class: 'about-link' %>
-				<ul class="about-nav">
-					<li><%= link_to "Staff", pages_staff_path %></li>
-					<li><%= link_to "Our Pastor", pages_pastor_path %></li>
-					<li><%= link_to "Ministries", pages_ministries_path %></li>
-					<li><%= link_to "Schedules", pages_schedules_path %></li>
-					<li><%= link_to "History", pages_history_path %></li>
-				</ul>
-			</li>
-			<li><%= link_to "Church Events", root_path %></li>
-			<li><%= link_to "Pastor's Blog", articles_path %></li>
-			<li><%= link_to "Sermons", root_path %></li>
-			<li><%= link_to "Contact", root_path %></li>
-			<li><%= link_to "Jobs", root_path %></li>
-			<li><%= link_to "Tithe", root_path %></li>
-		</ul>
-	</nav>
+		<nav>
+			<ul class="navigation">
+				<li><%= link_to "About", root_path, class: 'about-link' %>
+					<ul class="about-nav">
+						<li><%= link_to "Staff/Operations", pages_staff_path %></li>
+						<li><%= link_to "Our Pastor", pages_pastor_path %></li>
+						<li><%= link_to "Ministries", pages_ministries_path %></li>
+						<li><%= link_to "Schedules", pages_schedules_path %></li>
+						<li><%= link_to "History", pages_history_path %></li>
+					</ul>
+				</li>
+				<li><%= link_to "Church Events", root_path %></li>
+				<li><%= link_to "Pastor's Blog", articles_path %></li>
+				<li><%= link_to "Sermons", root_path %></li>
+				<li><%= link_to "Contact", root_path %></li>
+				<li><%= link_to "Jobs", root_path %></li>
+				<li><%= link_to "Tithe", root_path %></li>
+			</ul>
+		</nav>
+	</div>
 </header>
 
-<script type="text/javascript">
-	$(function() {
 
-		 $('nav').hide();
-		 $('#menu-btn').on('click', function() {
-		 	$(this).text(function(i, text) {
-		 		return text === 'Close' ? 'Menu' : 'Close'
-		 	});
-		 	$('nav').toggle('fast');
-		 });
-
-		$('.about-nav').hide();
-		$('.about-link').on('click', function(e) {
-			e.preventDefault();
-			$('.about-nav').toggle('fast');
-		});
-
-	});
-</script>
 

@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+	before_action :set_article, only: [:show, :edit, :update, :destroy]
 
 	def new
 		@article = Article.new
@@ -34,6 +35,13 @@ class ArticlesController < ApplicationController
 	  else
 	    render 'edit'
 	  end
+	end
+
+	def destroy
+		@article = Article.find(params[:id])
+		@article.destroy
+
+		redirect_to article_path
 	end
 
 

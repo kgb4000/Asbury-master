@@ -2,4 +2,5 @@
 	<h1 class="post-title"><%= @article.title %></h1>
 	<div class="date-written"><%= @article.created_at.strftime("%b %d, %Y") %></div>
 	<p class="article-post"><%= @article.post %></p>
+	<div><%= link_to 'Back', articles_path, class: 'backlink' %></div>
 </div>

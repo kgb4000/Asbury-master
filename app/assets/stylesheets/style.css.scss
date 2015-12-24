@@ -30,11 +30,21 @@ figure {
 	margin: 0;
 }
 
+.main-header,
+.church-info-container,
+.intro-container,
+.mvv-container,
 .container {
 	max-width: 100%;
 	margin: 0 auto;
 	padding: 0 1.4rem;
 }
+
+.header-container, {
+	max-width: 100%;
+	margin: 0 auto;
+}
+
 
 .image-container {
 	margin: 0 auto;
@@ -66,6 +76,7 @@ header {
 	background: transparent;
 	border: none;
 	outline: none;
+	font-weight: bold;
 }
 
 nav {
@@ -76,9 +87,10 @@ nav li {
 	background: #fafafa;
 }
 
-nav li a {
+nav a {
 	text-decoration: none;
 	font-size: 1.2rem;
+	font-weight: bold;
 	display: block;
 	padding: 0.1rem 2rem 0.1rem;
 	margin-top: 0.1rem;
@@ -86,7 +98,7 @@ nav li a {
 	transition: all 0.3s ease 0s;
 }
 
-nav li a:hover {
+nav a:hover {
 	color: #fff;
 	background: #222;
 	padding-left: 4rem;
@@ -107,6 +119,12 @@ nav li a:hover {
 			Mission Value Vision
 /********************************/
 
+.little-about-text {
+	overflow: hidden;
+	padding: 2rem 0;
+
+}
+
 .mission-value-vision {
 	margin-top: 4rem;
 	padding: 4rem 0;
@@ -117,7 +135,6 @@ nav li a:hover {
 	font-size: 1.6rem;
 	text-align: center;
 	color: grey;
-	padding: 1rem 2rem;
 }
 
 .mission-value-vision {
@@ -126,12 +143,13 @@ nav li a:hover {
 
 .mission,
 .vision,
-.value {
-	margin: 2rem 0;
+.values {
+	margin: 4rem 0;
 }
 
 .mission p,
-.value p {
+.vision p,
+.values p {
 	color: grey;
 	font-size: 1.2rem;
 	line-height: 1.8rem;
@@ -148,14 +166,9 @@ nav li a:hover {
 	text-align: center;
 }
 
-.front-img,
-.front-img-1 {
+.front-img {
 	display: inline-block;
 	background: #fff;
-}
-
-.front-img-1 {
-	display: none;
 }
 
 .little-about-text h2 {
@@ -193,15 +206,15 @@ input[type="submit"] {
 }
 
 .church-info {
-	padding: 4rem 0;
+	padding: 5rem 0;
 }
 
 h4 {
-	margin-bottom: 1rem;
+	margin-bottom: 0.2rem;
 }
 
 .location-email {
-	padding: 2rem 0;
+	margin: 2rem 0;
 }
 
 #map {
@@ -212,11 +225,6 @@ h4 {
 
 .page-title {
 	text-align: center;
-}
-
-.favorite-verses {
-	margin: 20rem 0;
-	background: #fff;
 }
 
 .address-link {
@@ -248,37 +256,7 @@ footer p {
 
 @media (min-width: 500px) { 
 
-	#logo {
-		display: none;
-	}
-
-	#d-logo {
-		display: inline-block;
-	}
-
-	.church-info .container {
-		width: 900px;
-	}
-
-}
-
-@media (min-width: 500px) { 
-
-	.container {
-		max-width: 680px;
-	}
-
-	nav li a {
-		padding-left: 3.5rem;
-	}
-
-	.location-email {
-		width: 45%;
-		float: left;
-		margin: 2.5%;
-	}
-
-	.past-pastors-img,
+		.past-pastors-img,
 	.old-church-img,
 	.pastor-pic {
 		width: 30%;
@@ -298,6 +276,107 @@ footer p {
 		margin-left: 2.5%;
 	}
 
+	#logo {
+		display: none;
+	}
+
+	#d-logo {
+		display: inline-block;
+		float: left;
+	}
+
+	.church-info .container {
+		width: 900px;
+	}
+
+	.mvv-container {
+		max-width: 500px;
+	}
+
+}
+
+@media (min-width: 768px) { 
+
+	header {
+		padding-top: 2rem;
+	}
+
+	#d-logo {
+		display: inline-block;
+		float: none;
+	}
+
+	.intro-container {
+		max-width: 700px;
+	}
+
+	.main-header {
+		display: inline-block;
+	}
+
+	#menu-btn {
+		display: none;
+	}
+
+	.main-header {
+		display: block;
+		text-align: center;
+	}
+
+	#d-logo {
+		font-size: 2.2rem;
+	}
+
+	nav {
+		display: block;
+		text-align: center;
+	}
+
+	nav {
+		width: 100%;
+		text-align: center;
+	}
+
+	nav li,
+	nav a {
+		display: inline;
+	}
+
+	nav a {
+		padding: 0 0.4rem 0.5rem;
+		margin: 0 0.375rem;
+		text-decoration: none;
+	}
+
+	nav {
+		display: block;
+		overflow: hidden;
+		float: right;
+	}
+
+	ul.navigation li {
+		display: inline;
+	}
+
+	ul.navigation li a {
+		display: inline-block;
+		font-size: 1rem;
+	}
+
+	nav li a:hover {
+		color: #CF4647;
+		padding-left: 0;
+		background: transparent;
+	}
+
+	.church-info-container {
+		width: 100%;
+	}
+
+	.container {
+		max-width: 800px;
+	}
+
 	.pastors .section-title {
 		text-align: left;
 		padding-left: 0;
@@ -305,6 +384,82 @@ footer p {
 
 	.m-line {
 		display: inline;
+	}
+}
+	
+@media (min-width: 1000px) {
+
+	nav a {
+		padding: 0 0.4rem 0.5rem;
+		margin: 0 1.5rem;
+		text-decoration: none;
+	}
+}
+
+@media (min-width: 1025px) {
+
+	.header-container {
+		width: 71.25rem;
+	}
+
+	.church-info {
+		padding: 10rem 0;
+	}
+
+	.church-info-container {
+		max-width: 71.25rem;
+		padding: 0 2rem;
+	}
+
+}
+
+@media (min-width: 1262px) {
+
+	.mvv-container {
+		max-width: 1500px;
+	}
+
+	.mission h1,
+	.values h1 {
+		font-size: 2.2rem;
+		float: left;
+		position: relative;
+		left: 22rem;
+		width: 14rem;
+		padding-top: 0.5rem;
+	}
+
+	.mission p,
+	.values-list {
+		float: right;
+		width: 30rem;
+		position: relative;
+		right: 10rem;
+	}
+
+	.vision h1 {
+		font-size: 2.5rem;
+		float: right;
+		position: relative;
+		right: 22rem;
+		width: 14rem;
+		padding-top: 1.5rem;
+	}
+
+	.vision-list {
+		width: 26rem;
+		float: left;
+		position: relative;
+		left: 15rem;
+	}
+
+	.location-email {
+		display: inline-block;
+		margin: 0 4rem;
+	}
+
+	.front-img {
+		width: 71.25rem;
 	}
 
 }

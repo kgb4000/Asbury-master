@@ -3,64 +3,94 @@
 		<%= image_tag('staff-church-img.jpg', class: 'front-img') %>
 	</div>
 
-	<div class="container">
+	<div class="intro-container">
 		<section class="little-about-text">
 			<h1 class="section-title">Every member in Ministry</h1>
 			<p>We invite you to come and worship with us, as we offer praises to the God of salvation. We are involved in many ministries at Asbury Broadneck United Methodist Church.  There is room for you and your family.  Please consider becoming a part of our efforts.  There is a place, a ministry, a work for you here.</p>
+			<div class="center-btn">
+				<%= link_to "Join us", pages_schedules_path, id: 'btn' %>
+			</div>
 		</section>
-		<div class="center-btn">
-			<%= link_to "Join us", pages_schedules_path, id: 'btn' %>
-		</div>
 	</div>
 
 	<section class="mission-value-vision">
-		<div class="container">
+		<div class="mvv-container group">
 			<section class="mission group">
 				<h1 class="section-title">Our Mission</h1>
 				<p>We exist to build God’s kingdom by welcoming people into relationship with God and each other, encouraging and equipping people to have a faith that works in everyday life, and sending disciples to serve the world in Jesus' name.</p>
 			</section>
 			<section class="vision group">
 				<h1 class="section-title">Our Vision</h1>
-				<ul>
-					<li>	Use and share our time, talents and treasure to win souls for Christ</li>
-					<li>Be a unified church in purpose and deed that communicates as one body</li>
-					<li>Minister to the needs of all ages</li>
-					<li>Adapt to cultural changes</li>
-					<li>Be consistent in evangelism outside the church walls to reach all of God’s people</li>
-					<li>Hold each other accountable to produce fruit for the glory of God.</li>
-					</ul>
+				<div class="vision-list">
+					<p>	Use and share our time, talents and treasure to win souls for Christ</p>
+					<p>Be a unified church in purpose and deed that communicates as one body</p>
+					<p>Minister to the needs of all ages</p>
+					<p>Adapt to cultural changes</p>
+					<p>Be consistent in evangelism outside the church walls to reach all of God’s people</p>
+					<p>Hold each other accountable to produce fruit for the glory of God.</p>
+				</div>
 			</section>
-			<section class="value group">
+			<section class="values group">
 				<h1 class="section-title">Our Values</h1>
-				<p>Continually reintermediate customized collaboration and idea-sharing rather than market positioning customer service. Continually evisculate 2.0 products via cross-unit e-business. Enthusiastically supply maintainable functionalities without long-term.</p>
+				<div class="values-list">
+					<p>Studying and living the word of God</p>
+					<p>Respecting and caring for God’s world. market positioning customer service</p>
+					<p>Serving humanity</p>
+				</div>
 			</section>
 		</div>
 	</section>
 
-	<section class="church-info group">
-		<div class="container">
+	<section class="church-info">
+		<div class="church-info-container group">
 			<section class="location-email">
 				<h4>Location</h4>
 				<%= link_to "657 Broadneck Road Annapolis Maryland 21409", "https://www.google.com/maps/place/657+Broadneck+Rd,+Annapolis,+MD+21409/@39.029246,-76.4700668,14z/data=!4m2!3m1!1s0x89b802a964fb69cf:0x1471ef542bc58876", class: 'address-link' %>
 			</section>
 			<section class="location-email">
 				<h4>Email</h4>
-				<p>hello@asburybroadneck.com</p>
+				<a href="mailto:asburybroadneck1@aol.com?Subject=Hello%20again" target="_top">asburybroadneck1@aol.com</a>
+			</section>
+
+			
+			<section class="location-email">
+				<h4>Phone</h4>
+				<p>(410) 757-2995</p>
 			</section>
 		</div>
 	</section>
-
-	<div class="image-container center-img">
-		<%= image_tag('forest-1.jpg', class: 'front-img') %>
-	</div>
-
-	<section class="favorite-verses">
-		
-	</section>
-
 </section>
 
 <section id="map"></section>
+
+ <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCnbZFAkvDO9kFzyGW7-6tRBxlRx5npus&callback=initMap"></script>
+
+ <script type="text/javascript">
+	function initMap() {
+		var styles = [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}];
+
+  	var styledMap = new google.maps.StyledMapType(styles, {name: "Styled Map"});
+
+    var myLatLng = {lat: 39.029246, lng: -76.452552};
+
+		var mapOptions = {
+			zoom: 14,
+			center: myLatLng,
+			scrollwheel: false
+		};
+
+		 var marker = new google.maps.Marker({
+		    position: myLatLng,
+		    map: map,
+		    title: 'Hello World!'
+		  });
+
+	  var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+	  map.mapTypes.set('map_style', styledMap);
+  	map.setMapTypeId('map_style');
+	}
+</script>
 
 
 

@@ -58,7 +58,6 @@ li {
 
 .activity-title {
 	margin: 1.5rem 0;
-	color: grey;
 }
 
 span.time {
@@ -82,6 +81,10 @@ span.time {
 /****************************
 				Staff
 *****************************/
+
+.church-img {
+	margin-bottom: 1rem;
+}
 
 .church-staff {
 	padding: 0.5rem 0;
@@ -144,6 +147,22 @@ h1.article-title a {
 
 .backlink {
 	display: block;
+	margin: 1rem 0;
+}
+
+p.article-post {
+	margin-top: 1rem;
+}
+
+.date-created {
+	padding-bottom: 0.5rem;
+}
+
+/********************************
+				Ministry Page
+/********************************/
+
+.ministry-group {
 	margin: 1rem 0;
 }
 

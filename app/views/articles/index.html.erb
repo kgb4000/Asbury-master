@@ -4,10 +4,14 @@
 	<% @articles.each do |article| %>
 		<section class="article">
 	  	<div><h1 class="article-title"><%= link_to article.title, article_path(article) %></h1></div>
-	  	<div class="date-created"><%= article.created_at.strftime("%b %d, %Y") %></div>
+	  	<div class="date-created">Rev wrote this on <%= article.created_at.strftime("%b %d, %Y") %></div>
 	  </section>
-	  <!--<div><%= link_to 'Show', article_path(article) %></div>-->
-    <div><%= link_to 'Edit', edit_article_path(article) %></div>
+    <div>
+    	<%= link_to 'Edit', edit_article_path(article) %> |
+    	<%= link_to 'Destroy', article_path(article),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+     </div>
 	  <!--<div><%= article.post %></div> -->
 	<% end %>
 </div>
