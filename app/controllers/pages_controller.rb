@@ -18,4 +18,10 @@ class PagesController < ApplicationController
 	def ministries
 	end
 
+	def tithe
+	end
+
+	def contact
+	end
+
 end

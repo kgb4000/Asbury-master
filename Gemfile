@@ -23,6 +23,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 gem 'devise'
+gem 'stripe', '~> 1.31'
+gem "figaro"
 
 gem 'rails_12factor', group: :production
 

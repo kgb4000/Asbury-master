@@ -1,17 +1,23 @@
 <div class="blog-page container">
 	<h1 class="page-title">Pastor's Blog</h1>
-	<%= link_to 'Add a new post', new_article_path %>
+	<% if current_user.try(:admin?) %>
+		<%= link_to 'Add a new post', new_article_path, class: "center" %>
+	<% end %>
 	<% @articles.each do |article| %>
-		<section class="article">
+		<section class="article group">
 	  	<div><h1 class="article-title"><%= link_to article.title, article_path(article) %></h1></div>
-	  	<div class="date-created">Rev wrote this on <%= article.created_at.strftime("%b %d, %Y") %></div>
-	  </section>
-    <div>
-    	<%= link_to 'Edit', edit_article_path(article) %> |
-    	<%= link_to 'Destroy', article_path(article),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %>
-     </div>
+	  	<p class="date-created">Rev wrote this on <%= article.created_at.strftime("%b %d, %Y") %></p>
+	  
+		  <p class="more-info"><%= link_to "Read more", article_path(article) %></p>
+		    <% if current_user.try(:admin?) %>
+			    <div class="delete-edit-btn-pastor-blog">
+			    	<%= link_to 'Edit', edit_article_path(article) %> |
+			    	<%= link_to 'Destroy', article_path(article),
+			              method: :delete,
+			              data: { confirm: 'Are you sure?' } %>
+		    	</div>
+		    <% end %>
+		  </section>
 	  <!--<div><%= article.post %></div> -->
 	<% end %>
 </div>

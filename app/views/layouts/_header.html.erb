@@ -3,6 +3,16 @@
 		<div class="main-header group">
 	    <%= link_to "ABUMC", root_path, id: "logo" %>
 	    <%= link_to "Asbury Broadneck UMC", root_path, id: "d-logo" %>
+	    <section class="login-logout-signin">
+	    <% if user_signed_in? %>
+	    	<p class="header-p">Signed in as <%= current_user.email %></p>
+	    	<%= link_to "Log out", destroy_user_session_path, method: :delete %>
+	    <% else %>
+	    	<%= link_to "Sign up", new_user_registration_path %>
+	    	<%= link_to "Log in", new_user_session_path %>
+	    <% end %>
+
+	    </section>
 			<button id="menu-btn">Menu</button>
 	  </div>
 		<nav>
@@ -14,14 +24,21 @@
 						<li><%= link_to "Ministries", pages_ministries_path %></li>
 						<li><%= link_to "Schedules", pages_schedules_path %></li>
 						<li><%= link_to "History", pages_history_path %></li>
+						<li><%= link_to "Jobs", root_path %></li>
 					</ul>
 				</li>
-				<li><%= link_to "Church Events", root_path %></li>
+				<li><%= link_to "Church Events", church_events_path %></li>
 				<li><%= link_to "Pastor's Blog", articles_path %></li>
-				<li><%= link_to "Sermons", root_path %></li>
-				<li><%= link_to "Contact", root_path %></li>
-				<li><%= link_to "Jobs", root_path %></li>
-				<li><%= link_to "Tithe", root_path %></li>
+				<li><%= link_to "Contact", pages_contact_path %></li>
+				<li><%= link_to "Tithe", new_tithe_path %></li>
+				<section class="login-logout-signin-mobile">
+			    <% if user_signed_in? %>
+			    	<li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+			    <% else %>
+			    	<li><%= link_to "Sign up", new_user_registration_path %></li>
+			    	<li><%= link_to "Log in", new_user_session_path %></li>
+			    <% end %>
+			   </section>
 			</ul>
 		</nav>
 	</div>

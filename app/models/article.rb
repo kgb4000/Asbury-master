@@ -4,5 +4,5 @@ class Article < ActiveRecord::Base
                     length: { minimum: 5 }
 
    validates :post, presence: true,
-   									length: { minimum: 20 }
+   									length: { minimum: 100 }
 end

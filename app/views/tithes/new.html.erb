@@ -1,0 +1,36 @@
+<div class="tithe-container">
+
+	<h1>Pay Tithes</h1>
+
+	<%= form_tag tithe_path, id: "payment-form" do %>
+	  <span class="payment-errors"></span>
+
+	  <input type="integer" name="amount" id="custom-donation-amount" placeholder="$100" />
+
+	  <div id="error"></div>
+
+	  <div class="form-row">
+	    <input type="text" size="20" data-stripe="number" placeholder="Card Number" value="4242 4242 4242 4242" />
+	  </div>
+
+	  <div class="form-row">
+	  	<input type="text" size="4" data-stripe="cvc" placeholder="CVC" value="123" />
+	  </div>
+
+	  <div class="form-row">
+	    <input type="text" size="2" data-stripe="exp-month" placeholder="MM "class="e-month" value="12"/>
+	    <input type="text" size="4" data-stripe="exp-year" placeholder="YYYY" class="e-year" value="2020" />
+	  </div>
+
+	  <button type="submit" id="stripe-btn">Pay Tithes</button>
+	<% end %>
+
+	<section class="stripe-section">
+		<%= image_tag "stripe-badge.png", class: "stripe-badge" %>
+		<p>Stripe is PCI compliant and your credit card information is sent directly to them. <%= link_to "Learn more", "https://stripe.com/" %></p>
+	</section>
+</div>
+
+
+
+

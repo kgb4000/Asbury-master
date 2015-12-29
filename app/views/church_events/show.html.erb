@@ -1,0 +1,15 @@
+<div class="container">
+
+  <h1><%= @church_event.event_name %></h1>
+  <p><%= @church_event.event_date.strftime("%A %d, %Y")  %></p>
+  <p><%= @church_event.event_description %></p>
+  <p><%= @church_event.event_location %></p>
+  <p> <%= @church_event.event_time.strftime("%l:%M %p")  %></p>  
+
+  <% if current_user.try(:admin?) %>
+    <div class="delete-edit-btn show-page">
+    	<%= link_to 'Edit', edit_church_event_path(@church_event) %> |
+    <% end %>
+    <%= link_to 'Back', church_events_path %>
+  </div>
+</div>

@@ -3,16 +3,19 @@
 	<head>
 	  <title>Asbury Broadneck UMC</title>
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
-	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'https://js.stripe.com/v2/', 'data-turbolinks-track' => true %>
 	  <link href='https://fonts.googleapis.com/css?family=Raleway:300,700' rel='stylesheet' type='text/css'>
 	  <%= csrf_meta_tags %>
 	</head>
 	<body>
-		<p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+		<div class="container alert-notice">
+			<p class="notice"><%= notice %></p>
+	    <p class="alert"><%= alert %></p>
+	   </div>
 		<%= render "layouts/header" %>
 			<%=yield %>
 		<%= render "layouts/footer" %>
 	</body>
 </html>
+

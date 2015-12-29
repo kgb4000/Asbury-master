@@ -1,0 +1,23 @@
+<div class="container">
+  <h1 class="page-title">Church Events</h1>
+  <% if current_user.try(:admin?) %>
+    <%= link_to 'Add a New Church event', new_church_event_path, class: "center" %>
+    <% end %>
+    <% @church_events.each do |church_event| %>
+      <section class="events group">
+        <h2 class="event-name"><%= link_to church_event.event_name, church_event_path(church_event) %></h2>
+        <p class="e-date"><%= church_event.event_date.strftime("%b %d, %Y") %></p>
+        <p><%= church_event.event_location %></p>
+        <p class="more-info"><%= link_to "More Info", church_event_path(church_event) %></p>
+      
+        <% if current_user.try(:admin?) %>
+          <div class="delete-edit-btn">
+            <span><%= link_to 'Edit', edit_church_event_path(church_event) %></span> |
+            <span><%= link_to 'Delete', church_event, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+          </div>
+        <% end %>
+      </section>
+      
+      <hr>
+    <% end %>
+</div>

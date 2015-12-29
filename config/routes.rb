@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :church_events
   devise_for :users
   root 'pages#index'
 
@@ -13,7 +14,11 @@ Rails.application.routes.draw do
 
   get 'pages/ministries'
 
+  get 'pages/contact'
+
   resources :articles
+
+  resource :tithe
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
 	before_action :set_article, only: [:show, :edit, :update, :destroy]
+	before_action :authenticate_user!, except: [:show, :index]
 
 	def new
 		@article = Article.new
@@ -47,6 +48,12 @@ class ArticlesController < ApplicationController
 
 	# Strong parameters
 	private
+
+	# Use callbacks to share common setup or constraints between actions.
+    def set_article
+      @event = Article.find(params[:id])
+    end
+
   def article_params
     params.require(:article).permit(:title, :post)
   end
